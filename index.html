@@ -292,6 +292,188 @@
             margin-bottom: 4rem;
         }
 
+        .publications-section {
+            margin-bottom: 4rem;
+        }
+
+        .publications-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 0 2rem;
+        }
+
+        .publications-intro p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            font-style: italic;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .publications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .publication-card {
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 2.5rem;
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .publication-card.featured {
+            background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(52, 211, 153, 0.1));
+            border: 2px solid rgba(16, 185, 129, 0.3);
+        }
+
+        .publication-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #10b981, #34d399);
+            transform: scaleX(0);
+            transition: transform 0.4s ease;
+        }
+
+        .publication-card.featured::before {
+            background: linear-gradient(90deg, #fbbf24, #f59e0b);
+        }
+
+        .publication-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .publication-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 25px 50px rgba(16, 185, 129, 0.2);
+        }
+
+        .publication-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: linear-gradient(45deg, #fbbf24, #f59e0b);
+            color: #0f1419;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .publication-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .publication-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: #34d399;
+            line-height: 1.4;
+        }
+
+        .publication-authors {
+            margin-bottom: 1rem;
+        }
+
+        .author-name {
+            color: #10b981;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .publication-venue {
+            color: #6b7280;
+            font-weight: 500;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .publication-date {
+            color: #6b7280;
+            font-size: 0.85rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .publication-description {
+            color: #cbd5e1;
+            line-height: 1.7;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .publication-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .pub-tag {
+            background: rgba(16, 185, 129, 0.2);
+            color: #10b981;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .pub-tag:hover {
+            background: rgba(16, 185, 129, 0.3);
+            transform: scale(1.05);
+        }
+
+        .research-metrics {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            padding: 2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .metric-item {
+            text-align: center;
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #34d399;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            font-size: 0.9rem;
+            color: #94a3b8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
         .projects-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -713,6 +895,118 @@
             </div>
         </div>
 
+        <div class="publications-section">
+            <h2 class="section-title">Research Publications & Academic Contributions</h2>
+            <div class="publications-intro">
+                <p>Contributing to the advancement of AI and machine learning through peer-reviewed research and innovative methodologies</p>
+            </div>
+            <div class="publications-grid">
+                <div class="publication-card featured">
+                    <div class="publication-badge">Latest Publication</div>
+                    <div class="publication-icon">🏆</div>
+                    <div class="publication-title">Is there Text in Wine? – S+U Learning-based Named Entity Recognition and Triplet Extraction from Wine Aroma Descriptors</div>
+                    <div class="publication-authors">
+                        <span class="author-name">Nazeer Basha Shaik</span> (Lead Author)
+                    </div>
+                    <div class="publication-venue">📍 Proceedings of the 35th Conference, Regensburg, Germany</div>
+                    <div class="publication-date">🗓️ March 6-8, 2024</div>
+                    <div class="publication-description">
+                        Pioneered advanced NLP research combining semi-supervised and unsupervised learning for domain-specific entity recognition. 
+                        This work introduces novel techniques for extracting semantic relationships from specialized vocabulary in the wine industry, 
+                        demonstrating practical applications of AI in niche domains.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="pub-tag">NLP</span>
+                        <span class="pub-tag">Named Entity Recognition</span>
+                        <span class="pub-tag">Semi-supervised Learning</span>
+                        <span class="pub-tag">Domain-specific AI</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-icon">🛡️</div>
+                    <div class="publication-title">Defense against Neural Fake News using Semantic Textual Similarity</div>
+                    <div class="publication-authors">
+                        <span class="author-name">Nazeer Basha Shaik</span>
+                    </div>
+                    <div class="publication-venue">📍 University of Hildesheim Research Publication</div>
+                    <div class="publication-date">🗓️ 2023</div>
+                    <div class="publication-description">
+                        Developed cutting-edge methodologies to combat misinformation through semantic analysis. This research addresses critical 
+                        challenges in information security by leveraging advanced NLP techniques to identify and filter deceptive content, 
+                        contributing significantly to digital media integrity.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Fake News Detection</span>
+                        <span class="pub-tag">Semantic Analysis</span>
+                        <span class="pub-tag">Information Security</span>
+                        <span class="pub-tag">Deep Learning</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-icon">📄</div>
+                    <div class="publication-title">A Split-and-Merge Approach For Long Document Summarization With Transformer Language Models</div>
+                    <div class="publication-authors">
+                        <span class="author-name">Nazeer Basha Shaik</span>
+                    </div>
+                    <div class="publication-venue">📍 University of Hildesheim Research Publication</div>
+                    <div class="publication-date">🗓️ 2023</div>
+                    <div class="publication-description">
+                        Introduced an innovative architectural solution to overcome transformer limitations in processing extensive documents. 
+                        This research presents a novel split-and-merge methodology that significantly improves summarization quality for 
+                        long-form content, with applications in legal, medical, and academic document processing.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Transformers</span>
+                        <span class="pub-tag">Document Summarization</span>
+                        <span class="pub-tag">Long Context Processing</span>
+                        <span class="pub-tag">Architecture Innovation</span>
+                    </div>
+                </div>
+
+                <div class="publication-card">
+                    <div class="publication-icon">⚡</div>
+                    <div class="publication-title">An Efficient Model for the Prediction and Optimization of Energy Consumption Using Deep Learning</div>
+                    <div class="publication-authors">
+                        <span class="author-name">Nazeer Basha Shaik</span>
+                    </div>
+                    <div class="publication-venue">📍 University of Hildesheim Research Publication</div>
+                    <div class="publication-date">🗓️ 2022</div>
+                    <div class="publication-description">
+                        Developed a comprehensive deep learning framework for smart energy management in automated environments. 
+                        This research demonstrates practical AI applications in sustainability, achieving significant improvements in 
+                        energy efficiency through predictive modeling and optimization algorithms.
+                    </div>
+                    <div class="publication-tags">
+                        <span class="pub-tag">Deep Learning</span>
+                        <span class="pub-tag">Energy Optimization</span>
+                        <span class="pub-tag">Smart Environments</span>
+                        <span class="pub-tag">Sustainability</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="research-metrics">
+                <div class="metric-item">
+                    <div class="metric-number">4</div>
+                    <div class="metric-label">Published Papers</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">3</div>
+                    <div class="metric-label">Research Areas</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">1</div>
+                    <div class="metric-label">Conference Presentation</div>
+                </div>
+                <div class="metric-item">
+                    <div class="metric-number">2+</div>
+                    <div class="metric-label">Years Research</div>
+                </div>
+            </div>
+        </div>
+
         <div class="contact-section">
             <h2 class="section-title">Let's Connect</h2>
             <p style="color: #94a3b8; margin-bottom: 2rem;">Ready to transform data into actionable insights? Let's discuss your next AI project!</p>
@@ -754,7 +1048,7 @@
             }, observerOptions);
 
             // Observe all animated elements
-            document.querySelectorAll('.project-card, .skill-category, .experience-item').forEach(element => {
+            document.querySelectorAll('.project-card, .skill-category, .experience-item, .publication-card').forEach(element => {
                 observer.observe(element);
             });
 
@@ -797,7 +1091,7 @@
                 }
             }
             
-            .project-card, .skill-category, .experience-item {
+            .project-card, .skill-category, .experience-item, .publication-card {
                 opacity: 0;
             }
         `;
